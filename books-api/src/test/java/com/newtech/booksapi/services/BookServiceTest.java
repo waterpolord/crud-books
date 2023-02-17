@@ -65,6 +65,5 @@ class BookServiceTest {
     @Test
     void deleteById() {
         when(bookService.deleteById(1)).thenReturn(true);
-        when(bookService.deleteById(2)).thenReturn(false);
     }
 }
