@@ -1,4 +1,4 @@
-package com.newtech.booksapi.controlers;
+package com.newtech.booksapi.controllers;
 
 import com.newtech.booksapi.models.Book;
 import com.newtech.booksapi.services.BookService;
