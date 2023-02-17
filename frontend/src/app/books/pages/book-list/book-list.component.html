@@ -1,0 +1,41 @@
+<div class="card border-primary mb-3" >
+  <div class="card-header">Libros</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de libros</h5>
+    <div *ngIf="books.length == 0" class="alert alert-info">
+      No existen libros actualmente
+    </div>
+    <div class="my-2 text-left">
+      <button class="btn btn-primary table-striped" type="button" [routerLink] = "['/books/form']">Nuevo Libro</button>
+    </div>
+    <table class = "table table-bordered table-striped" *ngIf="books.length > 0">
+      <!--<div style="width:900px; height:400px; overflow:auto;">-->
+        <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Autor</th>
+          <th>ISBN</th>
+          <th>Genero</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let aux of books" >
+
+          <td>{{aux.name}}</td>
+          <td>{{aux.auth}}</td>
+          <td>{{aux.isbn}}</td>
+          <td>{{aux.gender}}</td>
+          <td>{{aux.date}}</td>
+          <td>
+            <button type ="button" name="Editar" [routerLink] = "['/books/form',aux.id]" class="btn btn-primary" >Editar</button>
+            <button type ="button" name="Eliminar"  class="btn btn-danger" (click)='delete(aux)' > Eliminar</button>
+          </td>
+        </tr>
+
+        </tbody>
+      <!--</div>-->
+    </table>
+  </div>
+</div>

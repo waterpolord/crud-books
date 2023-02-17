@@ -1,0 +1,56 @@
+<div class="card bg-dark text-white">
+  <div class="card-body">
+    <form>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-primary" role="button" [routerLink] = "['/books']">Volver</button>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label col-sm-2">Nombre</label>
+        <div class="col-sm-6 ">
+          <input type="text" class="form-control" [(ngModel)]="book.name" name="name">
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <label  class="col-form-label col-sm-2">Autor</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="book.auth" name="auth">
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <label  class="col-form-label col-sm-2">Genero</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="book.gender" name="gender">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-label col-sm-2">ISBN</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="book.isbn" name="ISBN">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-label col-sm-2">Fecha de creación</label>
+        <div class="col-sm-6">
+          <input type="date" bsDatepicker class="form-control" [(ngModel)]="book.date" name="date">
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <ng-template #elseBlock>
+            <button class="btn btn-primary" name ="Editar" role="button" (click)='update()'>Editar</button>
+          </ng-template>
+          <button class="btn btn-primary" name ="Crear"role="button" (click)='create()' *ngIf="!book.id else elseBlock">Crear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
