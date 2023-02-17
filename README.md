@@ -7,6 +7,8 @@ Para el backend se realizó un API REST en Spring boot con Java, por la forma ef
 
 Se realizaron unitTest para el servicio utilizando Mockito
 
+y una interfaz para el fakeAPI con FeignClient
+
 **Frontend**
 
 Cliente web utilizando el framework de Angular
