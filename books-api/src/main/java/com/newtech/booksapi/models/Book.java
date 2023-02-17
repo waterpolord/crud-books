@@ -15,7 +15,6 @@ public class Book {
     private Integer id;
     private String name;
     private String auth;
-
     private LocalDate date;
     private String gender;
     private String isbn;
